@@ -131,6 +131,7 @@ public class CrossReferenceDrawer : PropertyDrawer
                 int objectIndex = objectOptions.IndexOf(property.FindPropertyRelative("m_ObjectPath").stringValue);
                 int chosenIndex = EditorGUI.Popup(objectRect, objectIndex, objectOptions.ToArray());
                 property.FindPropertyRelative("m_ObjectID").intValue = instanceIDs[chosenIndex];
+                property.FindPropertyRelative("m_ObjectPath").stringValue = objectOptions[chosenIndex];
             }
             else if (instanceIDs.Contains(property.FindPropertyRelative("m_ObjectID").intValue))
             {
@@ -154,14 +155,9 @@ public class CrossReferenceDrawer : PropertyDrawer
         else
         {
             EditorGUI.BeginDisabledGroup(true);
-            string sceneName = property.FindPropertyRelative("m_ScenePath").stringValue;
-            if (sceneName.EndsWith(".unity"))
-                sceneName = sceneName.TrimEnd(new char[] { '.', 'u', 'n', 'i', 't', 'y' });
-            if (sceneName.IndexOf('/') != -1)
-                sceneName = sceneName.Substring(sceneName.LastIndexOf('/') + 1);
-            EditorGUI.Popup(sceneRect, 0, new string[] { sceneName });
-            EditorGUI.Popup(objectRect, 0, new string[] 
-                { GameObjectHelper.GetGameObjectPath((GameObject)GameObjectHelper.FindObjectFromInstanceID(property.FindPropertyRelative("m_ObjectID").intValue)) });
+            GameObject item = (GameObject)GameObjectHelper.FindObjectFromInstanceID(property.FindPropertyRelative("m_ObjectID").intValue);
+            EditorGUI.Popup(sceneRect, 0, new string[] { item.scene.name });
+            EditorGUI.Popup(objectRect, 0, new string[] { GameObjectHelper.GetGameObjectPath(item) });
             EditorGUI.EndDisabledGroup();
         }
 
