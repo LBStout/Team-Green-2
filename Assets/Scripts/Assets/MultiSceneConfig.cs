@@ -11,6 +11,7 @@ public class MultiSceneConfig : ScriptableObject
 {
     [SerializeField]
     private SceneSetupWrapper[] m_Scenes;
+    public SceneSetupWrapper[] Scenes { get { return m_Scenes; } }
 
     #if UNITY_EDITOR
     // Saves the current multi-Scene configuration
@@ -42,7 +43,7 @@ public class MultiSceneConfig : ScriptableObject
      *  Wrapper class required for serializing SceneSetup data
      */
     [System.Serializable]
-    private class SceneSetupWrapper
+    public class SceneSetupWrapper
     {
         public bool isActive;
         public bool isLoaded;
