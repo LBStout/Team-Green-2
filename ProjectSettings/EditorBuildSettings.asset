@@ -17,4 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Blocks/Block B.unity
     guid: 3c368482c488a814e90cdb921200859b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 165e41e63abf9544385c8e4523552e76, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 68074b52765319b498adb744e8169524, type: 2}
