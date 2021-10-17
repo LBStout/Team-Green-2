@@ -12,4 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cafd99586b6d8e46b6cf3228d2ec0bb, type: 3}
   m_Name: MSConfig
   m_EditorClassIdentifier: 
-  m_Scenes: []
+  m_Scenes:
+  - isActive: 1
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/MainScene.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Logan/Block 1.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Logan/Block 2.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Canyn/Block 3.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Dingyi/Block 4.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Dingyi/Block 5.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Canyn/Block 6.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Dingyi/Block 7.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Deekshitha/Block 8.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Blocks/Deekshitha/Block 9.unity
