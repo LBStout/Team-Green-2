@@ -12,20 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cafd99586b6d8e46b6cf3228d2ec0bb, type: 3}
   m_Name: MSConfig
   m_EditorClassIdentifier: 
-  m_Scenes:
-  - isActive: 1
-    isLoaded: 1
-    isSubScene: 0
-    path: Assets/Scenes/MainScene.unity
-  - isActive: 0
-    isLoaded: 1
-    isSubScene: 0
-    path: Assets/Scenes/Blocks/Block A.unity
-  - isActive: 0
-    isLoaded: 1
-    isSubScene: 0
-    path: Assets/Scenes/Blocks/Block B.unity
-  - isActive: 0
-    isLoaded: 1
-    isSubScene: 0
-    path: Assets/Scenes/Blocks/Block C.unity
+  m_Scenes: []

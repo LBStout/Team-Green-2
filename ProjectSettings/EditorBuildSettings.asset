@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Scenes/Blocks/Block 3.unity
+    path: Assets/Scenes/Blocks/Canyn/Block 3.unity
     guid: a5f93893062100046a5a257ce9e5ebc8
   - enabled: 1
-    path: Assets/Scenes/Blocks/Block 1.unity
+    path: Assets/Scenes/Blocks/Logan/Block 1.unity
     guid: 0e04aad6f1b171449a4672adb315a5aa
   - enabled: 1
-    path: Assets/Scenes/Blocks/Block 2.unity
+    path: Assets/Scenes/Blocks/Logan/Block 2.unity
     guid: 3c368482c488a814e90cdb921200859b
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 165e41e63abf9544385c8e4523552e76, type: 2}
