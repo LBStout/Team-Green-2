@@ -188,7 +188,7 @@ public class SteeringWheelEditor : Editor
             EditorGUILayout.HelpBox("The following properties should only be set during runtime.", MessageType.Info);
         EditorGUILayout.BeginVertical(GUI.skin.box);
         EditorGUI.BeginDisabledGroup(!Application.isPlaying);
-        instance.Target = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true);
+        instance.Target = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true); // Don't need to set dirty bit if set in Play Mode only.
         EditorGUILayout.PropertyField(serializedObject.FindProperty("trackTarget"));
         EditorGUI.EndDisabledGroup();
         EditorGUILayout.EndVertical();
