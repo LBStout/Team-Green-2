@@ -60,7 +60,7 @@ public class SteeringWheel : MonoBehaviour
     private float lastAngle;
 
     [Tooltip("How much the wheel can be turned in either direction."), Range(0f, 180f)]
-    public float limitThreshold = 150f;
+    public float angleLimit = 150f;
 
     [Tooltip("How fast the wheel should return to neutral when the target isn't being tracked.\n[0: The wheel doesn't return to neutral]\n[1: The wheel snaps back to neutral immediately]"), 
         Range(0f, 1f)]
@@ -103,14 +103,14 @@ public class SteeringWheel : MonoBehaviour
             // Validate whether or not the new angle is a valid rotation
             bool validRotation = 
                 Mathf.Abs(correction) < 180f &&         // If absolute value of the difference is greater than 180, then the angle has swapped signs and should be ignored this frame.
-               (Mathf.Abs(Angle) < limitThreshold ||    // If the current angle is within the threshold range, then it is valid to be clamped at the threshold.
+               (Mathf.Abs(Angle) < angleLimit ||        // If the current angle is within the limited range, then it is valid to be clamped at the threshold.
                 Angle > 0f && correction < 0f ||        // If the current angle is equal / past the positive threshold, then it is only valid if the correction is negative.
                 Angle < 0f && correction > 0f);         // If the current angle is equal / past the negative threshold, then it is only valid if the correction is positive.
 
             if (validRotation) 
             {
                 // Clamp the new angle to threshold so either threshold is a reachable value
-                float clampedAngle = Mathf.Clamp(Angle + correction, -limitThreshold, limitThreshold);
+                float clampedAngle = Mathf.Clamp(Angle + correction, -angleLimit, angleLimit);
                 float clampedCorrection = Angle - clampedAngle;
 
                 // Rotate the wheel by the clamped correction
@@ -177,7 +177,7 @@ public class SteeringWheelEditor : Editor
         serializedObject.Update();
 
         // Serialized properties
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("limitThreshold"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("angleLimit"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("returnSpeed"));
 
         // Properties only usable in Play Mode
@@ -189,7 +189,7 @@ public class SteeringWheelEditor : Editor
 
         // Only change when target is modified so that last angle isn't constantly reset.
         EditorGUI.BeginChangeCheck();
-        GameObject newTarget = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true); // Don't need to set dirty bit if set in Play Mode only.
+        GameObject newTarget = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true);
         if (EditorGUI.EndChangeCheck())
             instance.Target = newTarget;
 
