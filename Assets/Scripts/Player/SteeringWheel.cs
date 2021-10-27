@@ -98,28 +98,25 @@ public class SteeringWheel : MonoBehaviour
                 lastAngle = currentAngle;
 
             // If stored is different from current, calculate the difference to apply
-            float difference = currentAngle - lastAngle;
-            bool positive = difference > 0f;
+            float correction = lastAngle - currentAngle;
 
             // Validate whether or not the new angle is a valid rotation
-            float newAngle = Angle - difference;
             bool validRotation = 
-                Mathf.Abs(difference) < 180f                    // If absolute value of the difference is greater than 180, then the angle has swapped signs and should be ignored this frame.
-                && (Mathf.Abs(newAngle) < limitThreshold        // If the angle after applying the difference is within threshold range, then it is valid.
-                || Mathf.Abs(Angle) < limitThreshold            // If the current angle is within the threshold range, then it is valid to be clamped at the threshold.
-                || Angle > 0f && positive                       // If the current angle is past the positive threshold, then it is only valid if the correction is negative.
-                || Angle < 0f && !positive);                    // If the current angle is past the negative threshold, then it is only valid if the correction is positive.
+                Mathf.Abs(correction) < 180f &&         // If absolute value of the difference is greater than 180, then the angle has swapped signs and should be ignored this frame.
+               (Mathf.Abs(Angle) < limitThreshold ||    // If the current angle is within the threshold range, then it is valid to be clamped at the threshold.
+                Angle > 0f && correction < 0f ||        // If the current angle is equal / past the positive threshold, then it is only valid if the correction is negative.
+                Angle < 0f && correction > 0f);         // If the current angle is equal / past the negative threshold, then it is only valid if the correction is positive.
 
             if (validRotation) 
             {
-                // Clamp newAngle to threshold so either threshold is a reachable value
-                newAngle = Mathf.Clamp(newAngle, -limitThreshold, limitThreshold);
-                float appliedDifference = Angle - newAngle;
+                // Clamp the new angle to threshold so either threshold is a reachable value
+                float clampedAngle = Mathf.Clamp(Angle + correction, -limitThreshold, limitThreshold);
+                float clampedCorrection = Angle - clampedAngle;
 
-                // Rotate the wheel by the clamped difference
-                transform.RotateAround(transform.position, -transform.up, appliedDifference);
+                // Rotate the wheel by the clamped correction
+                transform.RotateAround(transform.position, -transform.up, clampedCorrection);
                 Angle = Vector3.SignedAngle(-transform.forward, WorldUp, -transform.up);
-            }
+            }   
 
             // Update the last known angle
             lastAngle = currentAngle;
@@ -134,7 +131,7 @@ public class SteeringWheel : MonoBehaviour
 
             // Gradually move wheel back to neutral position
             float remainingOffset = Vector3.SignedAngle(-transform.forward, WorldUp, -transform.up);
-            float blend = (remainingOffset != 0) ? returnSpeed * remainingOffset * Time.deltaTime: 0f;
+            float blend = (remainingOffset != 0) ? returnSpeed * remainingOffset * Time.deltaTime : 0f;
             transform.RotateAround(transform.position, -transform.up, blend);
             Angle = Vector3.SignedAngle(-transform.forward, WorldUp, -transform.up);
         }
@@ -186,10 +183,18 @@ public class SteeringWheelEditor : Editor
         // Properties only usable in Play Mode
         if (!Application.isPlaying)
             EditorGUILayout.HelpBox("The following properties should only be set during runtime.", MessageType.Info);
+
         EditorGUILayout.BeginVertical(GUI.skin.box);
         EditorGUI.BeginDisabledGroup(!Application.isPlaying);
-        instance.Target = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true); // Don't need to set dirty bit if set in Play Mode only.
+
+        // Only change when target is modified so that last angle isn't constantly reset.
+        EditorGUI.BeginChangeCheck();
+        GameObject newTarget = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true); // Don't need to set dirty bit if set in Play Mode only.
+        if (EditorGUI.EndChangeCheck())
+            instance.Target = newTarget;
+
         EditorGUILayout.PropertyField(serializedObject.FindProperty("trackTarget"));
+
         EditorGUI.EndDisabledGroup();
         EditorGUILayout.EndVertical();
 
