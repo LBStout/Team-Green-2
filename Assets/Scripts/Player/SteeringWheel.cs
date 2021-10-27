@@ -23,18 +23,16 @@ public class SteeringWheel : MonoBehaviour
         }
     }
 
-    [Tooltip("Track the target and rotate the wheel.")]
-    public bool trackTarget;
-
     // The current vector used for rotating the wheel.
     private Vector3 projected;
 
-    private Vector3 m_WorldUp;
-    private Vector3 WorldUp
+    // Vector representing the projection of the world's up axis on the plane of the steering wheel.
+    private Vector3 m_WheelUp;
+    private Vector3 WheelUp
     { 
         get
         {
-            if (m_WorldUp == Vector3.zero)
+            if (m_WheelUp == Vector3.zero)
             {
                 // Grab current neutral position upward
                 Vector3 upwardPoint = Vector3.up + transform.position;
@@ -45,13 +43,13 @@ public class SteeringWheel : MonoBehaviour
                 float length2Plane = Mathf.Cos(projAngle * Mathf.Deg2Rad) * a.magnitude;
                 Vector3 projectedPoint = upwardPoint + n * length2Plane;
 
-                m_WorldUp = Vector3.Normalize(projectedPoint - transform.position);
+                m_WheelUp = Vector3.Normalize(projectedPoint - transform.position);
             }
-            return m_WorldUp;
+            return m_WheelUp;
         }
         set
         {
-            m_WorldUp = value;
+            m_WheelUp = value;
         }
     }
 
@@ -71,16 +69,16 @@ public class SteeringWheel : MonoBehaviour
     {
         Angle = 0f;
         lastAngle = Mathf.Infinity;
-        m_WorldUp = Vector3.zero;
+        m_WheelUp = Vector3.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Queue new up to be calculated.
-        WorldUp = Vector3.zero;
+        // Reset WheelUp
+        WheelUp = Vector3.zero;
 
-        if (trackTarget && Target != null)
+        if (Target != null)
         {
             // Project hand point onto 2D plane of steering wheel
             Vector3 a = transform.position - Target.transform.position;
@@ -91,7 +89,7 @@ public class SteeringWheel : MonoBehaviour
             projected = Vector3.Normalize(projectedPoint - transform.position);
 
             // Get the angle of the vector
-            float currentAngle = Vector3.SignedAngle(WorldUp, projected, -transform.up);
+            float currentAngle = Vector3.SignedAngle(WheelUp, projected, -transform.up);
 
             // Store initial angle if previously not tracked
             if (lastAngle == Mathf.Infinity)
@@ -115,7 +113,7 @@ public class SteeringWheel : MonoBehaviour
 
                 // Rotate the wheel by the clamped correction
                 transform.RotateAround(transform.position, -transform.up, clampedCorrection);
-                Angle = Vector3.SignedAngle(-transform.forward, WorldUp, -transform.up);
+                Angle = Vector3.SignedAngle(-transform.forward, WheelUp, -transform.up);
             }   
 
             // Update the last known angle
@@ -127,13 +125,13 @@ public class SteeringWheel : MonoBehaviour
             lastAngle = Mathf.Infinity;
 
             // Set projected to WorldUp so it is shown by Gizmos
-            projected = WorldUp;
+            projected = WheelUp;
 
             // Gradually move wheel back to neutral position
-            float remainingOffset = Vector3.SignedAngle(-transform.forward, WorldUp, -transform.up);
+            float remainingOffset = Vector3.SignedAngle(-transform.forward, WheelUp, -transform.up);
             float blend = (remainingOffset != 0) ? returnSpeed * remainingOffset * Time.deltaTime : 0f;
             transform.RotateAround(transform.position, -transform.up, blend);
-            Angle = Vector3.SignedAngle(-transform.forward, WorldUp, -transform.up);
+            Angle = Vector3.SignedAngle(-transform.forward, WheelUp, -transform.up);
         }
     }
 
@@ -158,8 +156,10 @@ public class SteeringWheel : MonoBehaviour
 [CustomEditor(typeof(SteeringWheel)), CanEditMultipleObjects]
 public class SteeringWheelEditor : Editor
 {
+    // The script being inspected
     private SteeringWheel instance;
 
+    // Prefix label text for Target
     private readonly static GUIContent targetPrefix = new GUIContent("Target", "The Game Object currently holding the wheel.");
 
     private void OnEnable()
@@ -192,8 +192,6 @@ public class SteeringWheelEditor : Editor
         GameObject newTarget = (GameObject)EditorGUILayout.ObjectField(targetPrefix, instance.Target, typeof(GameObject), true);
         if (EditorGUI.EndChangeCheck())
             instance.Target = newTarget;
-
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("trackTarget"));
 
         EditorGUI.EndDisabledGroup();
         EditorGUILayout.EndVertical();
