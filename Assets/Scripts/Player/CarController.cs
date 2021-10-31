@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 
 
 public class CarController : MonoBehaviour
 {
+    public InputActionAsset actions;
+    public InputActionReference movement;
 
     //const strings
     private const string HORIZONTAL = "Horizontal";
@@ -32,6 +34,10 @@ public class CarController : MonoBehaviour
     public Transform rearLeftWheeelTransform;
     public Transform rearRightWheeelTransform;
 
+    private void Start()
+    {
+        actions.Enable();
+    }
 
     private void FixedUpdate()
     {
@@ -73,6 +79,9 @@ public class CarController : MonoBehaviour
 
     private void HandleMotor() {
 
+        horizontalInput = movement.action.ReadValue<Vector2>().x;
+        verticalInput = movement.action.ReadValue<Vector2>().y;
+        
         frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
         frontRightWheelCollider.motorTorque = verticalInput * motorForce;
 
