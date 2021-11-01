@@ -78,6 +78,7 @@ public class SteeringWheel : MonoBehaviour
         // Reset WheelUp
         WheelUp = Vector3.zero;
 
+        TOOFAR:
         if (Target != null)
         {
             // Project hand point onto 2D plane of steering wheel
@@ -87,6 +88,13 @@ public class SteeringWheel : MonoBehaviour
             float length2Plane = Mathf.Cos(projAngle * Mathf.Deg2Rad) * a.magnitude;
             Vector3 projectedPoint = Target.transform.position + n * length2Plane;
             projected = Vector3.Normalize(projectedPoint - transform.position);
+
+            // Cancel out if the point is too far from the wheel
+            if (Vector3.Distance(transform.position, projectedPoint) > 1)
+            {
+                Target = null;
+                goto TOOFAR;
+            }
 
             // Get the angle of the vector
             float currentAngle = Vector3.SignedAngle(WheelUp, projected, -transform.up);
