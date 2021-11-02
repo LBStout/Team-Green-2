@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MSConfig
   m_EditorClassIdentifier: 
   m_Scenes:
-  - isActive: 1
+  - isActive: 0
     isLoaded: 1
     isSubScene: 0
     path: Assets/Scenes/MainScene.unity
@@ -41,10 +41,10 @@ MonoBehaviour:
     isLoaded: 1
     isSubScene: 0
     path: Assets/Scenes/Blocks/Canyn/Block 6.unity
-  - isActive: 0
+  - isActive: 1
     isLoaded: 1
     isSubScene: 0
-    path: Assets/Scenes/Blocks/Dingyi/Block 7.unity
+    path: Assets/Scenes/Blocks/Joshua/Block 7.unity
   - isActive: 0
     isLoaded: 1
     isSubScene: 0
