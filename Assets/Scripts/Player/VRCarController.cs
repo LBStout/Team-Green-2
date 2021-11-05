@@ -10,17 +10,14 @@ public class VRCarController : MonoBehaviour
     public SteeringWheel wheel;
 
     public InputActionAsset actions;
-    public InputActionReference movement;
-
-    //const strings
-    private const string HORIZONTAL = "Horizontal";
-    private const string VERTICAL = "Vertical";
+    public InputActionReference triggerRight;
+    public InputActionReference triggerRightClick;
+    public InputActionReference triggerLeft;
+    public InputActionReference triggerLeftClick;
 
     //input variables
-    private float horizontalInput;
-    private float verticalInput;
     private float steerAngle;
-    private bool isBreaking;
+    private bool isReverse;
 
     public float motorForce =  50f;
     public float brakeForce = 0f;
@@ -49,26 +46,40 @@ public class VRCarController : MonoBehaviour
         UpdateWheels();
     }
 
-    //this is unused now
-    private void GetInput()
+    public void OnReverse()
     {
-        horizontalInput = Input.GetAxis(HORIZONTAL);
-        verticalInput = Input.GetAxis(VERTICAL);
-        //To adjust to VR controller input later
-        isBreaking = Input.GetKey(KeyCode.Space);
-
-
+        isReverse = !isReverse;
     }
 
     private void HandleMotor() {
 
-  
-        verticalInput = movement.action.ReadValue<Vector2>().y;
-        
-        frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
-        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
+        float brake = 0f;
+        if (triggerLeftClick.action.ReadValue<float>() == 1f)
+            brake = 1f;
+        else
+            brake = triggerLeft.action.ReadValue<float>();
 
-        brakeForce = isBreaking ? 3000f : 0f;
+        float accelerate = 0f;
+        if (triggerRightClick.action.ReadValue<float>() == 1f)
+            accelerate = 1f;
+        else
+            accelerate = triggerRight.action.ReadValue<float>();
+
+        //if brake is not pressed
+        if (brake == 0)
+        {
+
+            if (isReverse)
+            {
+                accelerate *= -1;
+            }
+
+            frontLeftWheelCollider.motorTorque = accelerate * motorForce;
+            frontRightWheelCollider.motorTorque = accelerate * motorForce;
+        } 
+           
+
+        brakeForce = brake * 3000f;
         frontLeftWheelCollider.brakeTorque = brakeForce;
         frontRightWheelCollider.brakeTorque = brakeForce;
         rearLeftWheelCollider.brakeTorque = brakeForce;
@@ -76,7 +87,7 @@ public class VRCarController : MonoBehaviour
     }
 
     private void HandleSteering() {
-        steerAngle = maxSteerAngle * (wheel.Angle / wheel.angleLimit);
+        steerAngle = -maxSteerAngle * (wheel.Angle / wheel.angleLimit);
         frontLeftWheelCollider.steerAngle = steerAngle;
         frontRightWheelCollider.steerAngle = steerAngle;
     }

@@ -35,7 +35,7 @@ public class SteeringWheel : MonoBehaviour
             if (m_WheelUp == Vector3.zero)
             {
                 // Grab current neutral position upward
-                Vector3 upwardPoint = Vector3.up + transform.position;
+                Vector3 upwardPoint = transform.parent.up + transform.position;
                 Vector3 a = transform.position - upwardPoint;
                 Vector3 n = -transform.up;
 
@@ -64,6 +64,9 @@ public class SteeringWheel : MonoBehaviour
         Range(0f, 1f)]
     public float returnSpeed = 0.5f;
 
+    [Tooltip("How far the wheel can remain held from."), Range(0f, 1f)]
+    public float maxDistance = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,7 +93,7 @@ public class SteeringWheel : MonoBehaviour
             projected = Vector3.Normalize(projectedPoint - transform.position);
 
             // Cancel out if the point is too far from the wheel
-            if (Vector3.Distance(transform.position, projectedPoint) > 1)
+            if (Vector3.Distance(Target.transform.position, transform.position + (projected * 0.2f)) > maxDistance)
             {
                 Target = null;
                 goto TOOFAR;
@@ -151,11 +154,17 @@ public class SteeringWheel : MonoBehaviour
 
         // Target vector
         Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawSphere(transform.position + (projected * 0.35f), 0.1f);
+        Gizmos.DrawSphere(transform.position + (projected * 0.2f), 0.1f);
+
+        if (Target != null)
+        { 
+            Gizmos.color = new Color(0, 0, 1, 0.5f);
+            Gizmos.DrawSphere(Target.transform.position, 0.75f);
+        }
 
         // Forward vector
         Gizmos.color = Gizmos.color = new Color(0, 1, 0, 0.5f);
-        Vector3 upPosition = transform.position + (-transform.forward * 0.35f);
+        Vector3 upPosition = transform.position + (-transform.forward * 0.2f);
         Gizmos.DrawSphere(upPosition, 0.05f);
     }
 }
@@ -187,6 +196,7 @@ public class SteeringWheelEditor : Editor
         // Serialized properties
         EditorGUILayout.PropertyField(serializedObject.FindProperty("angleLimit"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("returnSpeed"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("maxDistance"));
 
         // Properties only usable in Play Mode
         if (!Application.isPlaying)
