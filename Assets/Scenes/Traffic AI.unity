@@ -1760,10 +1760,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 976451231435656583, guid: 46537e52f705ae347ba7b3bba2495ce0, type: 3}
-      propertyPath: waypoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 976451231435656603, guid: 46537e52f705ae347ba7b3bba2495ce0, type: 3}
       propertyPath: m_Enabled
       value: 1
