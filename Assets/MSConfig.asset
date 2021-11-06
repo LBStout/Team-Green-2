@@ -53,3 +53,7 @@ MonoBehaviour:
     isLoaded: 1
     isSubScene: 0
     path: Assets/Scenes/Blocks/Deekshitha/Block 9.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/CityBorder.unity
