@@ -5,9 +5,8 @@ using UnityEngine;
 public class WaypointTrigger : MonoBehaviour
 {
     public bool sameSeed = false;
-    public bool leftAllowed = true;
 
-    private List<Collider> agents = new List<Collider>();
+    private readonly List<Collider> agents = new List<Collider>();
 
     public GameObject[] waypoints = new GameObject[0];
 
@@ -32,7 +31,7 @@ public class WaypointTrigger : MonoBehaviour
         AgentControl controller = agent.gameObject.GetComponent<AgentControl>();
         if (controller != null && controller.waypoint != null && controller.waypoint == this.gameObject)
         {
-            int chosen = (int)Random.Range(0f, waypoints.Length - 0.00001f - (leftAllowed && waypoints.Length > 1f ? 0f : 1f));
+            int chosen = (int)Random.Range(0f, waypoints.Length - 0.00001f);
             //Debug.Log("Trigger Hit: " + chosen);
             controller.waypoint = waypoints[chosen];
             agents.Remove(agent);
