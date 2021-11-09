@@ -7,6 +7,8 @@ public class WaypointTrigger : MonoBehaviour
     public bool sameSeed = false;
     public bool leftAllowed = true;
 
+    private List<Collider> agents = new List<Collider>();
+
     public GameObject[] waypoints = new GameObject[0];
 
     private void Start()
@@ -19,14 +21,29 @@ public class WaypointTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void LateUpdate()
     {
-        AgentControl controller = other.gameObject.GetComponent<AgentControl>();
-        if (controller != null)
+        for (int i = 0; i < agents.Count; i++)
+            UpdateWaypoint(agents[i]);
+    }
+
+    private void UpdateWaypoint(Collider agent)
+    {
+        AgentControl controller = agent.gameObject.GetComponent<AgentControl>();
+        if (controller != null && controller.waypoint != null && controller.waypoint == this.gameObject)
         {
             int chosen = (int)Random.Range(0f, waypoints.Length - 0.00001f - (leftAllowed && waypoints.Length > 1f ? 0f : 1f));
             //Debug.Log("Trigger Hit: " + chosen);
             controller.waypoint = waypoints[chosen];
+            agents.Remove(agent);
         }
+        else if (controller == null)
+            agents.Remove(agent);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!agents.Contains(other))
+            agents.Add(other);
     }
 }
