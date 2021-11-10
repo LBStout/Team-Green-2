@@ -36,6 +36,28 @@
                     "action": "Reverse",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "899ea95f-a582-4e0a-9710-3142e9db9084",
+                    "path": "<ValveIndexController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a381707-9861-4db4-aaf0-af2fd6f35fc9",
+                    "path": "<ValveIndexController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

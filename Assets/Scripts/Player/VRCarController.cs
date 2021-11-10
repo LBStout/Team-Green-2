@@ -19,6 +19,7 @@ public class VRCarController : MonoBehaviour
     private float steerAngle;
     private bool isReverse;
 
+    public float maxVelocity = 26.82f;
     public float motorForce =  50f;
     public float brakeForce = 0f;
     public float maxSteerAngle = 30f;
@@ -73,6 +74,8 @@ public class VRCarController : MonoBehaviour
             {
                 accelerate *= -1;
             }
+            if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > maxVelocity)
+                accelerate = 0;
 
             frontLeftWheelCollider.motorTorque = accelerate * motorForce;
             frontRightWheelCollider.motorTorque = accelerate * motorForce;

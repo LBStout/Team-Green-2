@@ -56,7 +56,7 @@ WheelCollider:
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
+    m_ExtremumValue: 0.9
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
@@ -821,7 +821,7 @@ WheelCollider:
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
+    m_ExtremumValue: 0.9
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
@@ -952,7 +952,8 @@ MonoBehaviour:
   triggerRightClick: {fileID: 6454596279149084813, guid: 6e41a083d07597a4da0207117bdde9fd, type: 3}
   triggerLeft: {fileID: 2526168894431210536, guid: 6e41a083d07597a4da0207117bdde9fd, type: 3}
   triggerLeftClick: {fileID: 6986180202050166755, guid: 6e41a083d07597a4da0207117bdde9fd, type: 3}
-  motorForce: 100
+  maxVelocity: 13.41
+  motorForce: 250
   brakeForce: 0
   maxSteerAngle: 30
   frontLeftWheelCollider: {fileID: 958493039015910112}
@@ -1183,7 +1184,7 @@ WheelCollider:
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
+    m_ExtremumValue: 0.9
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
@@ -3252,7 +3253,7 @@ WheelCollider:
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
+    m_ExtremumValue: 0.9
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
