@@ -24,4 +24,18 @@ public class AgentControl : MonoBehaviour
             //print("Waypoint reached");
         }
     }
+
+    void OnDrawGizmos()
+    {
+        if (targetPoint != Vector3.zero)
+        {
+            Gizmos.color = new Color(0, 0, 1, 0.5f);
+            Gizmos.DrawSphere(targetPoint, 1);
+        }
+        else if (!Application.isPlaying && waypoint != null)
+        {
+            Gizmos.color = new Color(0, 0, 1, 0.5f);
+            Gizmos.DrawSphere(waypoint.transform.position, 1);
+        }
+    }
 }
