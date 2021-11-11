@@ -9,6 +9,11 @@ public class VRCarController : MonoBehaviour
 {
     public SteeringWheel wheel;
 
+
+    public AudioSource runningSound;
+    public AudioSource brakingSound;
+    public AudioSource accelaratingSound;
+
     public InputActionAsset actions;
     public InputActionReference triggerRight;
     public InputActionReference triggerRightClick;
@@ -79,7 +84,19 @@ public class VRCarController : MonoBehaviour
 
             frontLeftWheelCollider.motorTorque = accelerate * motorForce;
             frontRightWheelCollider.motorTorque = accelerate * motorForce;
-        } 
+
+            if (accelerate == 0)
+            {
+                runningSound.Play();
+            }
+            else {
+                accelaratingSound.Play();
+            }
+
+        }
+        else {
+            brakingSound.Play();
+        }
            
 
         brakeForce = brake * 3000f;
