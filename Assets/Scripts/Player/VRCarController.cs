@@ -9,7 +9,6 @@ public class VRCarController : MonoBehaviour
 {
     public SteeringWheel wheel;
 
-
     public AudioSource runningSound;
     public AudioSource brakingSound;
     public AudioSource accelaratingSound;
@@ -96,10 +95,12 @@ public class VRCarController : MonoBehaviour
         }
         else {
             brakingSound.Play();
+            if (gameObject.GetComponent<Rigidbody>().velocity.magnitude < 1.67625f * (3.5f/5))
+                gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
            
 
-        brakeForce = brake * 3000f;
+        brakeForce = brake * 4000f;
         frontLeftWheelCollider.brakeTorque = brakeForce;
         frontRightWheelCollider.brakeTorque = brakeForce;
         rearLeftWheelCollider.brakeTorque = brakeForce;
@@ -110,6 +111,9 @@ public class VRCarController : MonoBehaviour
         steerAngle = -maxSteerAngle * (wheel.Angle / wheel.angleLimit);
         frontLeftWheelCollider.steerAngle = steerAngle;
         frontRightWheelCollider.steerAngle = steerAngle;
+
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        rb.angularDrag = 0.5f + Mathf.Lerp(0, 1.5f, rb.velocity.magnitude / maxVelocity);
     }
 
 

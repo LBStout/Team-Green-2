@@ -31587,6 +31587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 7004034540331142826, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: maxAngle
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: Mute
       value: 1
@@ -31602,6 +31606,14 @@ PrefabInstance:
     - target: {fileID: 7328460182390180406, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: motorForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: maxVelocity
+      value: 16.7625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
