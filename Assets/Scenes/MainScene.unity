@@ -6323,7 +6323,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.999999, y: 1, z: 9.999999}
+  m_Size: {x: 12.825, y: 1, z: 12.825}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &423891092
 PrefabInstance:
@@ -31531,6 +31531,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1545139558}
     m_Modifications:
+    - target: {fileID: 282666191173527369, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 282666191173527369, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3808603624817060555, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -31578,6 +31586,22 @@ PrefabInstance:
     - target: {fileID: 4580495613632458865, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328460182390180406, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328460182390180406, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
