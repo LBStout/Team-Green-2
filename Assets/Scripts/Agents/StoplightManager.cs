@@ -13,17 +13,24 @@ public class StoplightManager : MonoBehaviour
     [SerializeField, Tooltip("The index of the stoplight that is currently green in the list.")]
     private int activeLight = 0;
 
+    private bool LateStart = true;
+
     // Start is called before the first frame update
     void Start()
     {
         timer = stateInterval;
-        // Start the default active light as green.
-        stoplights[activeLight].CompleteChange();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (LateStart)
+        {
+            // Start the default active light as green.
+            stoplights[activeLight].CompleteChange();
+            LateStart = false;
+        }
+
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
