@@ -21,7 +21,7 @@ public class AgentControl : MonoBehaviour
 
         if (Vector3.Distance(targetPoint, transform.position) < 2.0f)
         {
-            //print("Waypoint reached");
+            //Debug.Log(waypoint.name);
         }
     }
 
