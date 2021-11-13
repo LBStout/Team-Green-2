@@ -31539,6 +31539,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 282666191173527369, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7501ba21ac2f040f1b589076240f5953, type: 3}
     - target: {fileID: 3808603624817060555, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -31592,12 +31596,20 @@ PrefabInstance:
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: Mute
+      propertyPath: Loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: Mute
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7328460182390180406, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: Mute
@@ -31614,6 +31626,10 @@ PrefabInstance:
     - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: maxVelocity
       value: 16.7625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
+      propertyPath: accelaratingSound
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}

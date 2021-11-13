@@ -11,7 +11,6 @@ public class VRCarController : MonoBehaviour
 
     public AudioSource runningSound;
     public AudioSource brakingSound;
-    public AudioSource accelaratingSound;
 
     public InputActionAsset actions;
     public InputActionReference triggerRight;
@@ -23,8 +22,14 @@ public class VRCarController : MonoBehaviour
     private float steerAngle;
     private bool isReverse;
 
-    public float maxVelocity = 26.82f;
-    public float motorForce =  50f;
+    private bool isRunning;
+    private bool isBraking;
+
+    public float maxPitch = 4f;
+    public float minPitch = 0.5f;
+
+    public float maxVelocity = 16.76f;
+    public float motorForce = 500f;
     public float brakeForce = 0f;
     public float maxSteerAngle = 30f;
 
@@ -56,24 +61,24 @@ public class VRCarController : MonoBehaviour
         isReverse = !isReverse;
     }
 
-    private void HandleMotor() {
-
+    private void HandleMotor()
+    {
+        //get value from input
         float brake = 0f;
         if (triggerLeftClick.action.ReadValue<float>() == 1f)
             brake = 1f;
         else
             brake = triggerLeft.action.ReadValue<float>();
-
         float accelerate = 0f;
         if (triggerRightClick.action.ReadValue<float>() == 1f)
             accelerate = 1f;
         else
             accelerate = triggerRight.action.ReadValue<float>();
 
+        //change properties based on the input
         //if brake is not pressed
         if (brake == 0)
         {
-
             if (isReverse)
             {
                 accelerate *= -1;
@@ -84,17 +89,37 @@ public class VRCarController : MonoBehaviour
             frontLeftWheelCollider.motorTorque = accelerate * motorForce;
             frontRightWheelCollider.motorTorque = accelerate * motorForce;
 
-            if (accelerate == 0)
+            float speed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+            if (speed < minPitch) {
+                runningSound.pitch = minPitch;
+            }
+            else if (speed > maxPitch)
             {
+                runningSound.pitch = maxPitch;
+            }
+            else
+            {
+                runningSound.pitch = speed;
+            }
+            //if this is the first time to run the car
+            if (!isRunning)
+            {
+                isRunning = true;
                 runningSound.Play();
             }
-            else {
-                accelaratingSound.Play();
-            }
+            isBraking = false;
 
         }
         else {
-            brakingSound.Play();
+            //stop running and accelarating
+            isRunning = false;
+            //if this is the first time call braking
+            if (!isBraking)
+            {
+                brakingSound.Play();
+                isBraking = true;
+            }
+            
             if (gameObject.GetComponent<Rigidbody>().velocity.magnitude < 1.67625f * (3.5f/5))
                 gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
