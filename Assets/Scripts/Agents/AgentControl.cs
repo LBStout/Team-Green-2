@@ -9,20 +9,29 @@ public class AgentControl : MonoBehaviour
     public GameObject waypoint;
 
     private Vector3 targetPoint;
+    private bool shouldStop; 
 
     // Update is called once per frame
     void Update()
     {
-        if (waypoint != null)
+        if ((waypoint != null) && (!shouldStop))
         {
             targetPoint = waypoint.transform.position;
             agent.SetDestination(targetPoint);
+        }
+        else if (shouldStop)
+        {
+            
         }
 
         if (Vector3.Distance(targetPoint, transform.position) < 2.0f)
         {
             //Debug.Log(waypoint.name);
         }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        shouldStop = true;
     }
 
     void OnDrawGizmos()
