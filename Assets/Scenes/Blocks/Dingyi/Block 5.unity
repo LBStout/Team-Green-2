@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0ca4d55c59d61463e9a773024efbd201, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 86d3607eb0f6c460d83f60227811d5f8, type: 2}
 --- !u!1 &3755878
 GameObject:
   m_ObjectHideFlags: 0
@@ -20605,7 +20605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632210735}
   m_Layer: 0
-  m_Name: P3 (1)
+  m_Name: P3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30490,7 +30490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906391328}
   m_Layer: 0
-  m_Name: P4 (1)
+  m_Name: P4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30858,7 +30858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 937070383}
   m_Layer: 0
-  m_Name: P1 (1)
+  m_Name: P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40195,7 +40195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171107488}
   m_Layer: 0
-  m_Name: P2 (1)
+  m_Name: P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
