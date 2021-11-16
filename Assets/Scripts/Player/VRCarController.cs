@@ -75,6 +75,7 @@ public class VRCarController : MonoBehaviour
         else
             accelerate = triggerRight.action.ReadValue<float>();
 
+        float speed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
         //change properties based on the input
         //if brake is not pressed
         if (brake == 0)
@@ -89,7 +90,6 @@ public class VRCarController : MonoBehaviour
             frontLeftWheelCollider.motorTorque = accelerate * motorForce;
             frontRightWheelCollider.motorTorque = accelerate * motorForce;
 
-            float speed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
             if (speed < minPitch) {
                 runningSound.pitch = minPitch;
             }
@@ -114,10 +114,14 @@ public class VRCarController : MonoBehaviour
             //stop running and accelarating
             isRunning = false;
             //if this is the first time call braking
-            if (!isBraking)
+            if (!isBraking && speed > 0f)
             {
                 brakingSound.Play();
                 isBraking = true;
+            }
+            else if(isBraking && speed < 1f)
+            {
+                brakingSound.Stop();
             }
             
             if (gameObject.GetComponent<Rigidbody>().velocity.magnitude < 1.67625f * (3.5f/5))
