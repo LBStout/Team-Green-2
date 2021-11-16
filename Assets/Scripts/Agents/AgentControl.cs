@@ -10,6 +10,7 @@ public class AgentControl : MonoBehaviour
 
     private Vector3 targetPoint;
     private bool shouldStop; 
+    private Vector3 stopVelocity = new Vector3 (0.0f, 0.0f, 0.0f);
 
     // Update is called once per frame
     void Update()
@@ -21,7 +22,8 @@ public class AgentControl : MonoBehaviour
         }
         else if (shouldStop)
         {
-            
+            agent.velocity = stopVelocity;
+            agent.SetDestination(agent.transform.position);
         }
 
         if (Vector3.Distance(targetPoint, transform.position) < 2.0f)
