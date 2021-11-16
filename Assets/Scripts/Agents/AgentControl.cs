@@ -7,9 +7,12 @@ public class AgentControl : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject waypoint;
+    public Collider frontTrigger;
 
-    private Vector3 targetPoint;
-    private bool shouldStop; 
+    [HideInInspector]
+    public bool shouldStop;
+
+    private Vector3 targetPoint; 
     private Vector3 stopVelocity = new Vector3 (0.0f, 0.0f, 0.0f);
 
     // Update is called once per frame
@@ -30,10 +33,6 @@ public class AgentControl : MonoBehaviour
         {
             //Debug.Log(waypoint.name);
         }
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        shouldStop = true;
     }
 
     void OnDrawGizmos()

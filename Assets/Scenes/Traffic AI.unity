@@ -1894,6 +1894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182655639}
   - component: {fileID: 182655640}
+  - component: {fileID: 182655641}
   m_Layer: 0
   m_Name: Front Detection
   m_TagString: Untagged
@@ -1928,6 +1929,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 4.4914854e-16, y: 0.5, z: 0.558618}
+--- !u!114 &182655641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182655638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fcb9bc681432ce48826c36c99dfae82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &190177621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3237,7 +3250,7 @@ MonoBehaviour:
   - {fileID: 1303946483}
   - {fileID: 106254595}
   - {fileID: 700882045}
-  activeLight: 0
+  activeLight: 3
 --- !u!1 &400317869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9413,6 +9426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453408284}
   - component: {fileID: 1453408285}
+  - component: {fileID: 1453408286}
   m_Layer: 0
   m_Name: Front Detection
   m_TagString: Untagged
@@ -9447,6 +9461,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 4.4914854e-16, y: 0.5, z: 0.558618}
+--- !u!114 &1453408286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453408283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fcb9bc681432ce48826c36c99dfae82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1463942656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10042,6 +10068,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1656446317}
   waypoint: {fileID: 2016260675}
+  frontTrigger: {fileID: 0}
+  shouldStop: 0
 --- !u!195 &1656446317
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10436,6 +10464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1685369956}
   waypoint: {fileID: 2016260675}
+  frontTrigger: {fileID: 0}
+  shouldStop: 0
 --- !u!65 &1685369958
 BoxCollider:
   m_ObjectHideFlags: 0
