@@ -7,7 +7,6 @@ public class AgentControl : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject waypoint;
-    public Collider frontTrigger;
 
     [HideInInspector]
     public bool shouldStop;

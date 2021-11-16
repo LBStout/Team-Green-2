@@ -11,6 +11,7 @@ TagManager:
   - speedText
   - needle
   - speedLabelTemplate
+  - player
   layers:
   - Default
   - TransparentFX
