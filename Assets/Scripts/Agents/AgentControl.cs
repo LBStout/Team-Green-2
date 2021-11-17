@@ -30,7 +30,7 @@ public class AgentControl : MonoBehaviour
 
         if (Vector3.Distance(targetPoint, transform.position) < 2.0f)
         {
-            //Debug.Log(waypoint.name);
+            Debug.Log(waypoint.name);
         }
     }
 
