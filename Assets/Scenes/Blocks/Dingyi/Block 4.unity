@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28345907, g: 0.36992916, b: 0.5010727, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749128, g: 0.21147478, b: 0.14576817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11908,7 +11908,6 @@ GameObject:
   - component: {fileID: 607602639}
   - component: {fileID: 607602638}
   - component: {fileID: 607602637}
-  - component: {fileID: 607602643}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -12037,18 +12036,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &607602643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607602635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &609140602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22441,7 +22428,6 @@ GameObject:
   - component: {fileID: 1089421204}
   - component: {fileID: 1089421203}
   - component: {fileID: 1089421202}
-  - component: {fileID: 1089421208}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -22570,18 +22556,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1089421208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089421200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1089565612
 GameObject:
   m_ObjectHideFlags: 0
@@ -22597,7 +22571,6 @@ GameObject:
   - component: {fileID: 1089565618}
   - component: {fileID: 1089565617}
   - component: {fileID: 1089565616}
-  - component: {fileID: 1089565620}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -22726,18 +22699,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1089565620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089565612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1090447512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36095,7 +36056,6 @@ GameObject:
   - component: {fileID: 1679053594}
   - component: {fileID: 1679053593}
   - component: {fileID: 1679053592}
-  - component: {fileID: 1679053598}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -36224,18 +36184,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1679053598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679053590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1680664040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44485,6 +44433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2034294034}
+  - component: {fileID: 2034294035}
   m_Layer: 0
   m_Name: P4
   m_TagString: Untagged
@@ -44507,6 +44456,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &2034294035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034294033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ee46a80e244425490b2b50d4803db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2034989312
 PrefabInstance:
   m_ObjectHideFlags: 0
