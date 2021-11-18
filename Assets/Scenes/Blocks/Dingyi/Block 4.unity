@@ -11971,7 +11971,7 @@ GameObject:
   - component: {fileID: 607602637}
   m_Layer: 0
   m_Name: pedestrian1
-  m_TagString: Untagged
+  m_TagString: pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22652,7 +22652,7 @@ GameObject:
   - component: {fileID: 1089421202}
   m_Layer: 0
   m_Name: pedestrian1
-  m_TagString: Untagged
+  m_TagString: pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22795,7 +22795,7 @@ GameObject:
   - component: {fileID: 1089565616}
   m_Layer: 0
   m_Name: pedestrian1
-  m_TagString: Untagged
+  m_TagString: pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36325,7 +36325,7 @@ GameObject:
   - component: {fileID: 1679053592}
   m_Layer: 0
   m_Name: pedestrian1
-  m_TagString: Untagged
+  m_TagString: pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
