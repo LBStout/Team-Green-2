@@ -11,6 +11,7 @@ public class AntiFlipScript : MonoBehaviour
 
     // Internal timer for the countdown.
     private float timer = -1f;
+    public bool flipped { get; private set; }
 
     // Update is called once per frame
     void Update()
@@ -40,10 +41,17 @@ public class AntiFlipScript : MonoBehaviour
 
         // If the car is flipped and no timer is active, start a timer.
         if (timer < 0f && Mathf.Abs(currentAngle) > maxAngle)
+        {
             timer = defaultTimer;
+            flipped = true;
+        }
         // If the car corrects itself before the timer has expired, stop the timer.
         else if (Mathf.Abs(currentAngle) < maxAngle)
+        {
             timer = -1f;
+            flipped = false;
+        }
+            
     }
 
     // Gizmos to show angle of car for debugging.

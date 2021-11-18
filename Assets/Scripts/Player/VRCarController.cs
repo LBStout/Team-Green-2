@@ -120,7 +120,7 @@ public class VRCarController : MonoBehaviour
             isBraking = false;
 
             //if there is no moving force for the wheel and the speed is low enough, car stop
-            if (accelerate == 0 && speed < 1.67625f * (1f / 5))
+            if (accelerate == 0 && speed < 1.67625f * (1f / 5) && !GetComponent<AntiFlipScript>().flipped)
                 gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
         //if the brake is pressed
@@ -149,7 +149,7 @@ public class VRCarController : MonoBehaviour
             }
 
             //if speed is low enough, stop the car
-            if (speed < 1.67625f * (3.5f / 5))
+            if (speed < 1.67625f * (3.5f / 5) && !GetComponent<AntiFlipScript>().flipped)
                 gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
