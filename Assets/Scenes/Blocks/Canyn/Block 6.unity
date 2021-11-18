@@ -20890,7 +20890,6 @@ GameObject:
   - component: {fileID: 915884915}
   - component: {fileID: 915884914}
   - component: {fileID: 915884913}
-  - component: {fileID: 915884912}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -20913,18 +20912,6 @@ Transform:
   m_Father: {fileID: 1114212949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &915884912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915884910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &915884913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21046,7 +21033,6 @@ GameObject:
   - component: {fileID: 918214268}
   - component: {fileID: 918214267}
   - component: {fileID: 918214266}
-  - component: {fileID: 918214265}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -21069,18 +21055,6 @@ Transform:
   m_Father: {fileID: 2083852005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &918214265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918214263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &918214266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32340,7 +32314,6 @@ GameObject:
   - component: {fileID: 1476045321}
   - component: {fileID: 1476045320}
   - component: {fileID: 1476045319}
-  - component: {fileID: 1476045318}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -32363,18 +32336,6 @@ Transform:
   m_Father: {fileID: 1560091438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1476045318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476045316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1476045319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44926,7 +44887,6 @@ GameObject:
   - component: {fileID: 2050635890}
   - component: {fileID: 2050635889}
   - component: {fileID: 2050635888}
-  - component: {fileID: 2050635887}
   m_Layer: 0
   m_Name: pedestrian1
   m_TagString: Untagged
@@ -44949,18 +44909,6 @@ Transform:
   m_Father: {fileID: 1368847884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050635887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050635885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e406f4d206cc347a4267cd9a21ac6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2050635888
 MonoBehaviour:
   m_ObjectHideFlags: 0
