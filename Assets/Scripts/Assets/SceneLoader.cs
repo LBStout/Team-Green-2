@@ -12,7 +12,7 @@ public class SceneLoader : MonoBehaviour
     void Start()
     {
 
-            for (int i = 1; i <= Config.Scenes.Length; i++)
+            for (int i = 1; i < Config.Scenes.Length; i++)
             {
                 SceneManager.LoadScene(Config.Scenes[i].path, LoadSceneMode.Additive);
             }
