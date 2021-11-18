@@ -90,17 +90,20 @@ public class VRCarController : MonoBehaviour
             frontLeftWheelCollider.motorTorque = accelerate * motorForce;
             frontRightWheelCollider.motorTorque = accelerate * motorForce;
 
-            if (speed < minPitch) {
-                runningSound.pitch = minPitch;
-            }
-            else if (speed > maxPitch)
-            {
-                runningSound.pitch = maxPitch;
-            }
-            else
-            {
-                runningSound.pitch = speed;
-            }
+            float blend = Mathf.Abs(speed / (maxVelocity * 0.8f));
+            runningSound.pitch = Mathf.Lerp(minPitch, maxPitch, Mathf.Clamp(blend, 0, 1));
+
+            //if (speed < minPitch) {
+            //    runningSound.pitch = minPitch;
+            //}
+            //else if (speed > maxPitch)
+            //{
+            //    runningSound.pitch = maxPitch;
+            //}
+            //else
+            //{
+            //    runningSound.pitch = speed;
+            //}
             //if this is the first time to run the car
             if (!isRunning)
             {

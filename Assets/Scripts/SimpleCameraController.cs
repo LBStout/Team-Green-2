@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace UnityTemplateProjects
 {
-    public class SimpleCameraController : PortalTraveller
+    public class SimpleCameraController : MonoBehaviour
     {
         class CameraState
         {
