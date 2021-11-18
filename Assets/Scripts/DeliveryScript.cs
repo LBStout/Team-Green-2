@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeliveryScript : MonoBehaviour
 {
-
+    public CrossReference boxes;
     private GameObject[] deliveryPoints;
     private int randNum;
 
@@ -21,6 +21,7 @@ public class DeliveryScript : MonoBehaviour
     {
         if (other.gameObject.tag == "player")
         {
+            boxes.gameObject.SetActive(!boxes.gameObject.activeSelf);
             randNum = Random.Range(0, deliveryPoints.Length);
             transform.position = deliveryPoints[randNum].transform.position;
         }
