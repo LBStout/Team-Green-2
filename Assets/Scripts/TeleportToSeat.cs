@@ -18,9 +18,6 @@ public class TeleportToSeat : MonoBehaviour
     {
         if(asset != null)
             asset.Enable();
-
-        // Start player in seat (more likely).
-        RecenterPlayerPosition();
     }
 
     // Update is called once per frame
