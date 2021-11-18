@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28345937, g: 0.36992973, b: 0.5010742, a: 1}
+  m_IndirectSpecularColor: {r: 0.28345922, g: 0.36992946, b: 0.50107336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -34006,36 +34006,12 @@ PrefabInstance:
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7197152323727319572, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7328460182390180406, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: Mute
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7328460182390180406, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: motorForce
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
-      propertyPath: maxVelocity
-      value: 16.7625
       objectReference: {fileID: 0}
     - target: {fileID: 7353450235265177037, guid: 3db600f1be7fb9743a64ad330c693c67, type: 3}
       propertyPath: accelaratingSound
