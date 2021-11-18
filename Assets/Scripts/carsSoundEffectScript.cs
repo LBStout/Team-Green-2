@@ -23,18 +23,21 @@ public class carsSoundEffectScript : MonoBehaviour
 
         float speed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
 
-        if (speed < minPitch)
-        {
-            runningSound.pitch = minPitch;
-        }
-        else if (speed > maxPitch)
-        {
-            runningSound.pitch = maxPitch;
-        }
-        else
-        {
-            runningSound.pitch = speed;
-        }
+        float blend = Mathf.Abs(speed / (5f * 0.8f));
+        runningSound.pitch = Mathf.Lerp(minPitch, maxPitch, Mathf.Clamp(blend, 0, 1));
+
+        //if (speed < minPitch)
+        //{
+        //    runningSound.pitch = minPitch;
+        //}
+        //else if (speed > maxPitch)
+        //{
+        //    runningSound.pitch = maxPitch;
+        //}
+        //else
+        //{
+        //    runningSound.pitch = speed;
+        //}
 
 
     }

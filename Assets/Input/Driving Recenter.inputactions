@@ -26,7 +26,7 @@
                 {
                     "name": "",
                     "id": "a1b6e23e-f737-4490-8015-0273a2824b9e",
-                    "path": "<XRController>{LeftHand}/trackpadClicked",
+                    "path": "<XRController>{LeftHand}/menu",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -37,7 +37,7 @@
                 {
                     "name": "",
                     "id": "8c7cbf8c-37b9-4cef-84ce-288ba0115af9",
-                    "path": "<XRController>{RightHand}/trackpadClicked",
+                    "path": "<XRController>{RightHand}/menu",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
