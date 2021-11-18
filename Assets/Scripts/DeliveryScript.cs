@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class DeliveryScript : MonoBehaviour
 {
+    public AudioSource boxPickup;
+    public AudioSource boxDropoff;
     public CrossReference boxes;
     private GameObject[] deliveryPoints;
     private int randNum;
+    private bool noiseToggle = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,18 @@ public class DeliveryScript : MonoBehaviour
         //When the player collides with the delivery point...
         if (other.gameObject.tag == "player")
         {
+
+            if (noiseToggle == false)
+            {
+                boxPickup.Play();
+                noiseToggle = true;
+            }
+            else
+            {
+                boxDropoff.Play();
+                noiseToggle = false;
+            }
+
             //Pick up/Drop off the package...
             if (boxes.gameObject != null)
                 boxes.gameObject.SetActive(!boxes.gameObject.activeSelf);
