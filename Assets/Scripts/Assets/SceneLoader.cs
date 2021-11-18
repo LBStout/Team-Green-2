@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Get all the unloaded scenes, and load them
         for (int i = 1; i < Config.Scenes.Length; i++)
         {
             if (!SceneManager.GetSceneByPath(Config.Scenes[i].path).IsValid())

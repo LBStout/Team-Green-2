@@ -117,6 +117,7 @@ public class VRCarController : MonoBehaviour
             //stop running and accelarating
             isRunning = false;
             //if this is the first time call braking
+            //If speed is at half or more of max speed, play a long brake noise
             if (!isBraking && speed >= 8)
             {
                 brakingSound.time = 1f;
@@ -125,9 +126,11 @@ public class VRCarController : MonoBehaviour
                 isBraking = true;
             } else if (!isBraking && speed < 2f * (3.5f / 5))
             {
+                //If speed is very slow, play no brake noise
                 isBraking = true;
             } else if (!isBraking && speed < 8)
             {
+                //If speed is below half of max speed, play a short brake noise
                 brakingSound.time = 1.3f;
                 brakingSound.Play();
                 runningSound.pitch = minPitch;
