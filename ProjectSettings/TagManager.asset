@@ -12,6 +12,8 @@ TagManager:
   - needle
   - speedLabelTemplate
   - player
+  - flower
+  - Delivery
   layers:
   - Default
   - TransparentFX
