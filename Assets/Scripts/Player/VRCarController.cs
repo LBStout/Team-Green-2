@@ -25,11 +25,12 @@ public class VRCarController : MonoBehaviour
     private float steerAngle;
     private bool isReverse;
 
-    private bool isRunning;
     private bool isBraking;
 
     public float maxPitch = 4f;
     public float minPitch = 0.5f;
+    private float currentPitch;
+    private float pitchBlend = 1f;
 
     public float maxVelocity = 16.76f;
     public float motorForce = 500f;
@@ -53,6 +54,7 @@ public class VRCarController : MonoBehaviour
     {
         //enable inputs from XR controller
         actions.Enable();
+        currentPitch = runningSound.pitch;
     }
 
     private void FixedUpdate()
@@ -86,6 +88,8 @@ public class VRCarController : MonoBehaviour
         //get value fo the speed of the car
         float speed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
 
+        
+
         //change properties based on the input
         //if brake is not pressed
         if (brake == 0)
@@ -107,15 +111,9 @@ public class VRCarController : MonoBehaviour
             float blend = Mathf.Abs(speed / (maxVelocity * 0.8f));
             //update the pitch of the sounds of driving which is assoicate with the relative speed of the car
             runningSound.pitch = Mathf.Lerp(minPitch, maxPitch, Mathf.Clamp(blend, 0, 1));
+            currentPitch = runningSound.pitch;
+            pitchBlend = 0f;
 
-
-            //if this is the first time to run the car
-            if (!isRunning)
-            {
-                //update the state and start to play the sound of driving
-                isRunning = true;
-                runningSound.Play();
-            }
             //update the braking state when car is running
             isBraking = false;
 
@@ -125,15 +123,12 @@ public class VRCarController : MonoBehaviour
         }
         //if the brake is pressed
         else {
-            //stop running and accelarating
-            isRunning = false;
             //if this is the first time call braking and If speed is at half or more of max speed, play a long brake noise
             if (!isBraking && speed >= 8)
             {
                 //the time property indicates when in sound clip that it begins to play
                 brakingSound.time = 1f;
                 brakingSound.Play();
-                runningSound.pitch = minPitch;
                 isBraking = true;
             } else if (!isBraking && speed < 2f * (3.5f / 5))
             {
@@ -144,9 +139,12 @@ public class VRCarController : MonoBehaviour
                 //If speed is below half of max speed, play a short brake noise
                 brakingSound.time = 1.3f;
                 brakingSound.Play();
-                runningSound.pitch = minPitch;
                 isBraking = true;
             }
+
+            // Blend running sound pitch smoothly to minimum.
+            pitchBlend = Mathf.Clamp(pitchBlend + Time.deltaTime, 0f, 1f);
+            runningSound.pitch = Mathf.Lerp(currentPitch, minPitch, pitchBlend);
 
             //if speed is low enough, stop the car
             if (speed < 1.67625f * (3.5f / 5) && !GetComponent<AntiFlipScript>().flipped)
