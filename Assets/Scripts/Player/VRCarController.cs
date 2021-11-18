@@ -91,6 +91,7 @@ public class VRCarController : MonoBehaviour
             frontRightWheelCollider.motorTorque = accelerate * motorForce;
 
             float blend = Mathf.Abs(speed / (maxVelocity * 0.8f));
+            Debug.Log(speed);
             runningSound.pitch = Mathf.Lerp(minPitch, maxPitch, Mathf.Clamp(blend, 0, 1));
 
             //if (speed < minPitch) {
@@ -117,13 +118,27 @@ public class VRCarController : MonoBehaviour
             //stop running and accelarating
             isRunning = false;
             //if this is the first time call braking
-            if (!isBraking)
+            if (!isBraking && speed >= 8)
             {
+                brakingSound.time = 1f;
                 brakingSound.Play();
-                runningSound.Stop();
+                runningSound.pitch = minPitch;
                 isBraking = true;
             }
-            
+
+            else if (!isBraking && speed < 2f * (3.5f / 5))
+            {
+                isBraking = true;
+            }
+
+            else if (!isBraking && speed < 8)
+            {
+                brakingSound.time = 1.3f;
+                brakingSound.Play();
+                runningSound.pitch = minPitch;
+                isBraking = true;
+            }
+
             if (speed < 1.67625f * (3.5f/5))
                 gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
