@@ -7,8 +7,8 @@ public class pedestrianDisplyScript : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject[] people;
-    public float defaultTimer = 10f;
-    private float timer = 0f;
+    //public float defaultTimer = 10f;
+    //private float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +28,13 @@ public class pedestrianDisplyScript : MonoBehaviour
     void Update()
     {
 
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
-        {
-            timer = defaultTimer;
+        //timer -= Time.deltaTime;
+        //if (timer <= 0f)
+        //{
+        //    timer = defaultTimer;
 
 
-        }
+        //}
 
     }
 }
