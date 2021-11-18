@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28345922, g: 0.36992946, b: 0.50107336, a: 1}
+  m_IndirectSpecularColor: {r: 0.28345937, g: 0.36992973, b: 0.5010742, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -396,6 +396,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6166056132337516241, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2010621719}
+    - target: {fileID: 6166056132749097340, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 584365052}
     - target: {fileID: 6166056132863137150, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -2760,6 +2768,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 180738448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &183553136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 2119737601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &186678329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2838,6 +2851,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6588699172849977618, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
   m_PrefabInstance: {fileID: 425518476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &190319333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 266385386}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &191384699
 PrefabInstance:
@@ -3753,6 +3771,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SSE 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 421292061}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1001168765}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1621818975}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
 --- !u!1001 &267202883
@@ -5395,6 +5425,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 354710632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &358337682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1561375516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &360757668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5986,6 +6021,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 388350464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &394699122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671856990693977, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 568922144}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &401231720
 GameObject:
@@ -6632,6 +6672,14 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1080293948782313812}
+    - target: {fileID: 6166056132863137150, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1302249033}
+    - target: {fileID: 6166056133996039222, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1624293238}
     - target: {fileID: 7152688446211247274, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
       propertyPath: m_Name
       value: NE 4 Way Intersection
@@ -6704,6 +6752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2081ae9ea04dd74eb347ed9fbd9dfc4, type: 3}
+--- !u!1 &438958374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671857483325937, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 782461113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &442165688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6759,6 +6812,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: NEbE 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 187267086}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 702599313}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1814111631}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
 --- !u!1001 &448668427
@@ -6908,6 +6973,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 448973574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454243616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671856990693977, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 3206848049643545675}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &456437594
 PrefabInstance:
@@ -8274,6 +8344,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SWbW 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2053758374}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1598597801}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 438958374}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
 --- !u!1001 &536152444
@@ -8850,6 +8932,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SE Corner
       objectReference: {fileID: 0}
+    - target: {fileID: 3865671856949369240, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 190319333}
+    - target: {fileID: 3865671858550206297, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1646824496}
     - target: {fileID: 8393784421140088435, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -9191,6 +9281,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 584095196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &584365052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 528378305}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &585123690
 PrefabInstance:
@@ -10079,6 +10174,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 634423287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &642859214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 442165688}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &645616433
 PrefabInstance:
@@ -11020,6 +11120,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 695740196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &702599313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1561375516}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &706209022
 GameObject:
@@ -12162,6 +12267,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SW Corner
       objectReference: {fileID: 0}
+    - target: {fileID: 3865671856949369240, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1065496490}
+    - target: {fileID: 3865671858550206297, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2043513278}
     - target: {fileID: 8393784421140088435, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -14772,6 +14885,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 997790177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1001168765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1439957369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1002091619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15067,6 +15185,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1017146421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1019906291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 266385386}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1021543092
 PrefabInstance:
@@ -15594,6 +15717,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6588699173452597618, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
   m_PrefabInstance: {fileID: 1310105804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1065496490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 528378305}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1072548701
 PrefabInstance:
@@ -19617,6 +19745,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1300007822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302249033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 442165688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1304008062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19894,10 +20027,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6166056132337516241, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2125134801}
     - target: {fileID: 6166056132749097340, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 691756690}
+    - target: {fileID: 6166056132863137150, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 358337682}
     - target: {fileID: 6166056133996039222, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -22337,6 +22478,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SSW 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1686171530}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2120037261}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1019906291}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
 --- !u!1001 &1440896737
@@ -23283,6 +23436,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NE Corner
       objectReference: {fileID: 0}
+    - target: {fileID: 3865671856949369240, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 642859214}
+    - target: {fileID: 3865671858550206297, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1624293236}
     - target: {fileID: 8393784421140088435, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -23329,6 +23490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+--- !u!1 &1483577687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671856990693977, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 1483577686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1484744051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23402,6 +23568,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1484744051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1491561847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 442165688}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1496794053
 PrefabInstance:
@@ -24603,6 +24774,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SEbE 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1953342804}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 394699122}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1491561847}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
 --- !u!1001 &1568547006
@@ -24827,6 +25010,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1596051517}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1598597801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 2119737601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1600141640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25049,6 +25237,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1617794963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1621818975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671857483325937, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 568922144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1624293235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25104,8 +25297,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: NNE 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1972458293}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1483577687}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 8328112767588657846}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+--- !u!1 &1624293236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1624293235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1624293237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1624293235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1624293238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1624293235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1625961431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25401,6 +25621,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1644785818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1646824496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1561375516}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1656548788
 PrefabInstance:
@@ -26655,6 +26880,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1746223926}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1747151895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 528378305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1747198269
 GameObject:
   m_ObjectHideFlags: 0
@@ -27841,6 +28071,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1812554793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1814111631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671857483325937, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 1483577686}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1816774387
 PrefabInstance:
@@ -30744,6 +30979,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6588699173452597618, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
   m_PrefabInstance: {fileID: 425518476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1980030012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 2119737601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1983282304
 GameObject:
   m_ObjectHideFlags: 0
@@ -31061,6 +31301,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 2010470533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2010621719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1439957369}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2013687663
 PrefabInstance:
@@ -31862,6 +32107,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 2042439570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2043513278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 1439957369}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2049113983
 PrefabInstance:
@@ -33217,8 +33467,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: NWbW 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1080293948040013158}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 454243616}
+    - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1747151895}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+--- !u!1 &2120037261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3865671856990693977, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+  m_PrefabInstance: {fileID: 782461113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2122276143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33292,6 +33559,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 2122276143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2125134801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 266385386}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2125212242
 PrefabInstance:
@@ -33510,10 +33782,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: NW Corner
       objectReference: {fileID: 0}
+    - target: {fileID: 3865671856949369240, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 8328112767588657847}
     - target: {fileID: 3865671857483325937, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
       propertyPath: m_Name
       value: Outer Start Waypoint
       objectReference: {fileID: 0}
+    - target: {fileID: 3865671858550206297, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1980030012}
     - target: {fileID: 8393784421140088435, guid: e4c1a5049a99d0e4dad8c4f91f0bdfcc, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -33620,10 +33900,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 54545247}
+    - target: {fileID: 6166056132749097340, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 183553136}
     - target: {fileID: 6166056132863137150, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 72504655}
+    - target: {fileID: 6166056133996039222, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 8328112767588657848}
     - target: {fileID: 7152688446211247274, guid: 5fe3a4b6205ca8e44a03f0b4024ad0e6, type: 3}
       propertyPath: m_Name
       value: NW 4 Way Intersection
@@ -33810,9 +34098,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: NNW 3 Way Intersection
       objectReference: {fileID: 0}
+    - target: {fileID: 8602766587695646098, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1080293948175663412}
+    - target: {fileID: 8602766588217093693, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1624293237}
     - target: {fileID: 8602766588372484671, guid: eb84962addee4a24c8a499dee9887920, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1811752573228336570}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+--- !u!1 &8328112767588657846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190458417745, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 8328112767588657845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8328112767588657847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674190940804707, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 8328112767588657845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8328112767588657848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8763674191039527417, guid: eb84962addee4a24c8a499dee9887920, type: 3}
+  m_PrefabInstance: {fileID: 8328112767588657845}
+  m_PrefabAsset: {fileID: 0}
