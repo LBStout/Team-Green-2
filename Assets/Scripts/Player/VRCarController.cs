@@ -33,6 +33,9 @@ public class VRCarController : MonoBehaviour
     public float brakeForce = 0f;
     public float maxSteerAngle = 30f;
 
+    public float minDrag = 0.05f;
+    public float maxDrag = 0.75f;
+
     //get reference to wheel collider
     public WheelCollider frontLeftWheelCollider;
     public WheelCollider frontRightWheelCollider;
@@ -112,6 +115,8 @@ public class VRCarController : MonoBehaviour
             }
             isBraking = false;
 
+            if (accelerate == 0 && speed < 1.67625f * (1f / 5))
+                gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
         else {
             //stop running and accelarating
@@ -136,11 +141,13 @@ public class VRCarController : MonoBehaviour
                 runningSound.pitch = minPitch;
                 isBraking = true;
             }
-            
-            if (speed < 1.67625f * (3.5f/5))
+
+            if (speed < 1.67625f * (3.5f / 5))
                 gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
-           
+
+        gameObject.GetComponent<Rigidbody>().drag = 
+            Mathf.Lerp(maxDrag, minDrag, Mathf.Clamp(speed / (maxVelocity * 0.25f), 0f, 1f));
 
         brakeForce = brake * 4000f;
         frontLeftWheelCollider.brakeTorque = brakeForce;
