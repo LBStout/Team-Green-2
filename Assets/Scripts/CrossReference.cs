@@ -8,6 +8,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 
+// Serializatble class for managing references to objects in other scenes more easily.
 [System.Serializable]
 public class CrossReference
 {
@@ -22,6 +23,7 @@ public class CrossReference
     [SerializeField]
     private int m_ObjectID;
 
+    // Passthrough to gain access to the object present in another scene during runtime.
     private GameObject m_GameObject;
     [HideInInspector]
     public GameObject gameObject {
@@ -33,6 +35,7 @@ public class CrossReference
         } 
     }
 
+    // Direct access to the transform of the object like other components.
     public Transform transform
     {
         get
@@ -48,6 +51,7 @@ public class CrossReference
         m_ObjectID = -1;
     }
 
+    // Internal script definition.
     public CrossReference(string scenePath, string objectPath)
     {
         m_ScenePath = scenePath;
@@ -55,6 +59,7 @@ public class CrossReference
     }
 }
 
+// Utility class containing a few methods for getting components on cross references.
 public static class CrossReferenceUtility
 {
     public static T GetComponent<T>(this CrossReference crossReference) where T : Component
@@ -73,6 +78,7 @@ public static class CrossReferenceUtility
     }
 }
 
+// Property drawer class for showing better UI in the inspector for public variables of the CrossReference type.
 #if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(CrossReference))]
 public class CrossReferenceDrawer : PropertyDrawer

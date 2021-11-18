@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Helper class containing a few helpful methods for managing GameObjects.
 public static class GameObjectHelper
 {
+    // Stores method implementation for private method.
     private static Func<int, UnityEngine.Object> m_FindObjectFromInstanceID = null;
     
+    // Grabs the private method implementation of Object.FindObjectFromInstanceID() and makes it publicly available through this class.
     static GameObjectHelper()
     {
         var methodInfo = typeof(UnityEngine.Object).GetMethod("FindObjectFromInstanceID", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
@@ -16,6 +19,7 @@ public static class GameObjectHelper
             m_FindObjectFromInstanceID = (Func<int, UnityEngine.Object>)Delegate.CreateDelegate(typeof(Func<int, UnityEngine.Object>), methodInfo);
     }
 
+    // Public access to Object.FindObjectFromInstanceID(int instanceID).
     public static UnityEngine.Object FindObjectFromInstanceID(int instanceID)
     {
         if (m_FindObjectFromInstanceID == null)
@@ -32,6 +36,7 @@ public static class GameObjectHelper
         return children.ToArray();
     }
 
+    // Returns the path to a GameObject within a Scene's hierarchy.
     public static string GetGameObjectPath(GameObject obj)
     {
         string path = obj.name;
