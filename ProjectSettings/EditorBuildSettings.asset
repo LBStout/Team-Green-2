@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityBorder.unity
     guid: c5c75f84e030b1f4fbdb560f3bcb1901
+  - enabled: 1
+    path: Assets/Scenes/Delvery Testing.unity
+    guid: b7715a957aa3b514ba1408f16a27300c
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 165e41e63abf9544385c8e4523552e76, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 68074b52765319b498adb744e8169524, type: 2}
