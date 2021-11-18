@@ -24,7 +24,9 @@ public class DeliveryScript : MonoBehaviour
         if (other.gameObject.tag == "player")
         {
             //Pick up/Drop off the package...
-            boxes.gameObject.SetActive(!boxes.gameObject.activeSelf);
+            if (boxes.gameObject != null)
+                boxes.gameObject.SetActive(!boxes.gameObject.activeSelf);
+
             //Then assign a random new delivery point
             randNum = Random.Range(0, deliveryPoints.Length);
             transform.position = deliveryPoints[randNum].transform.position;

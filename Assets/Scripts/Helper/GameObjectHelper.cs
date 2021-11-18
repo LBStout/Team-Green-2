@@ -8,9 +8,20 @@ public static class GameObjectHelper
 {
     // Stores method implementation for private method.
     private static Func<int, UnityEngine.Object> m_FindObjectFromInstanceID = null;
-    
+
     // Grabs the private method implementation of Object.FindObjectFromInstanceID() and makes it publicly available through this class.
+    #if UNITY_EDITOR
     static GameObjectHelper()
+    {
+        var methodInfo = typeof(UnityEngine.Object).GetMethod("FindObjectFromInstanceID", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+        if (methodInfo == null)
+            Debug.LogError("FindObjectFromInstanceID was not found in UnityEngine.Object");
+        else
+            m_FindObjectFromInstanceID = (Func<int, UnityEngine.Object>) Delegate.CreateDelegate(typeof(Func<int, UnityEngine.Object>), methodInfo);
+    }
+    #else
+    [RuntimeInitializeOnLoadMethod]
+    static void LoadMethod()
     {
         var methodInfo = typeof(UnityEngine.Object).GetMethod("FindObjectFromInstanceID", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
         if (methodInfo == null)
@@ -18,6 +29,7 @@ public static class GameObjectHelper
         else
             m_FindObjectFromInstanceID = (Func<int, UnityEngine.Object>)Delegate.CreateDelegate(typeof(Func<int, UnityEngine.Object>), methodInfo);
     }
+    #endif
 
     // Public access to Object.FindObjectFromInstanceID(int instanceID).
     public static UnityEngine.Object FindObjectFromInstanceID(int instanceID)
