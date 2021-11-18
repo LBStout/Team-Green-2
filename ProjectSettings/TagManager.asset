@@ -15,6 +15,7 @@ TagManager:
   - flower
   - Delivery
   - pedestrian
+  - boxes
   layers:
   - Default
   - TransparentFX
