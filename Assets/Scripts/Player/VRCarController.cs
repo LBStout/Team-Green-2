@@ -117,10 +117,20 @@ public class VRCarController : MonoBehaviour
             //stop running and accelarating
             isRunning = false;
             //if this is the first time call braking
-            if (!isBraking)
+            if (!isBraking && speed >= 8)
             {
+                brakingSound.time = 1f;
                 brakingSound.Play();
-                runningSound.Stop();
+                runningSound.pitch = minPitch;
+                isBraking = true;
+            } else if (!isBraking && speed < 2f * (3.5f / 5))
+            {
+                isBraking = true;
+            } else if (!isBraking && speed < 8)
+            {
+                brakingSound.time = 1.3f;
+                brakingSound.Play();
+                runningSound.pitch = minPitch;
                 isBraking = true;
             }
             

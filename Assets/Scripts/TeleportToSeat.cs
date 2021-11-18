@@ -27,7 +27,7 @@ public class TeleportToSeat : MonoBehaviour
         {
             disToSeat.x = transform.position.x - player.transform.position.x;
             disToSeat.z = transform.position.z - player.transform.position.z;
-            player.transform.parent.transform.position += disToSeat;
+            player.transform.parent.transform.position += new Vector3(disToSeat.x, 0f, disToSeat.z);
         }
     }
 }

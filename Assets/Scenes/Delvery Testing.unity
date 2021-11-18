@@ -1882,6 +1882,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d37cd7ef25bd1c4cbec3c58dc37ae4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxes:
+    m_ScenePath: Assets/Scenes/MainScene.unity
+    m_ObjectPath: Car Start Position/Car/Boxes
+    m_ObjectID: -31118802
 --- !u!1 &1365163891
 GameObject:
   m_ObjectHideFlags: 0

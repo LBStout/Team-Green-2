@@ -14,8 +14,8 @@ public class pedestrainsShowScript : MonoBehaviour
     {
         people = GameObject.FindGameObjectsWithTag("pedestrian");
 
-        for(int i=0; i<people.length;i++){
-}
+        //for(int i=0; i<people.length;i++){
+    //}
 
     }
 
