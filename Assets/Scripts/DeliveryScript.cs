@@ -6,7 +6,7 @@ public class DeliveryScript : MonoBehaviour
 {
     public AudioSource boxPickup;
     public AudioSource boxDropoff;
-    public CrossReference boxes;
+    public GameObject boxes;
     private GameObject[] deliveryPoints;
     private int randNum;
     private bool noiseToggle = false;
@@ -16,6 +16,7 @@ public class DeliveryScript : MonoBehaviour
     {
         //Get all possible delivery points, and randomly assign one to start
         deliveryPoints = GameObject.FindGameObjectsWithTag("Delivery");
+        boxes = GameObject.FindGameObjectWithTag("boxes");
         randNum = Random.Range(0, deliveryPoints.Length);
         transform.position = deliveryPoints[randNum].transform.position;
     }
