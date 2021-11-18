@@ -1140,8 +1140,8 @@ MonoBehaviour:
   triggerLeftClick: {fileID: 6986180202050166755, guid: 6e41a083d07597a4da0207117bdde9fd, type: 3}
   maxPitch: 4
   minPitch: 0.5
-  maxVelocity: 13.41
-  motorForce: 250
+  maxVelocity: 16.7625
+  motorForce: 500
   brakeForce: 0
   maxSteerAngle: 30
   frontLeftWheelCollider: {fileID: 958493039015910112}
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94118c94f5be6048b7e5009bb4ef5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 89
+  maxAngle: 75
   defaultTimer: 3
 --- !u!82 &7197152323727319572
 AudioSource:
@@ -1259,10 +1259,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 548f6b675311f4a80bc10c373d1a1506, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
