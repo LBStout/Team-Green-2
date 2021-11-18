@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class pedestrianDisplyScript : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject[] people;
@@ -17,8 +18,8 @@ public class NewBehaviourScript : MonoBehaviour
         for (int i = 0; i < people.Length; i++)
         {
 
-            //people[i].GetComponent<Nav>
-
+            people[i].GetComponent<NavMeshAgent>().enabled = false;
+            people[i].GetComponent<PedestrianController>().enabled = false;
         }
 
     }
