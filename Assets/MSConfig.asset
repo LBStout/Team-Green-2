@@ -57,3 +57,7 @@ MonoBehaviour:
     isLoaded: 1
     isSubScene: 0
     path: Assets/Scenes/CityBorder.unity
+  - isActive: 0
+    isLoaded: 1
+    isSubScene: 0
+    path: Assets/Scenes/Delvery Testing.unity
