@@ -13,6 +13,7 @@ public class SceneLoader : MonoBehaviour
     {
         for (int i = 1; i < Config.Scenes.Length; i++)
         {
+            if (!SceneManager.GetSceneByPath(Config.Scenes[i].path).IsValid())
                 SceneManager.LoadScene(Config.Scenes[i].path, LoadSceneMode.Additive);
         }
     }
