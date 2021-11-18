@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 22116658}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3790,7 +3790,7 @@ GameObject:
   - component: {fileID: 252968373}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6925,7 +6925,7 @@ GameObject:
   - component: {fileID: 493825229}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8533,7 +8533,7 @@ GameObject:
   - component: {fileID: 626954053}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9599,7 +9599,7 @@ GameObject:
   - component: {fileID: 724945246}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11635,8 +11635,8 @@ GameObject:
   m_Component:
   - component: {fileID: 877920510}
   m_Layer: 0
-  m_Name: DeliveryObjective (1)
-  m_TagString: Untagged
+  m_Name: DeliveryObjective
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11649,7 +11649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877920509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -132.9, y: 0, z: -75.21}
+  m_LocalPosition: {x: -132.9, y: 0, z: -77.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1086579860}
@@ -14571,7 +14571,7 @@ GameObject:
   - component: {fileID: 1073970152}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14766,6 +14766,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 877920510}
+  - {fileID: 1212355795}
+  - {fileID: 2096295246}
   m_Father: {fileID: 135634283}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17080,6 +17082,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 1210518642}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1212355794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212355795}
+  m_Layer: 0
+  m_Name: DeliveryObjective
+  m_TagString: Delivery
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1212355795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212355794}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -132.9, y: 0, z: 2.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1086579860}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1212414894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21693,7 +21725,7 @@ GameObject:
   - component: {fileID: 1489321742}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22019,7 +22051,7 @@ GameObject:
   - component: {fileID: 1506917629}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31110,7 +31142,7 @@ GameObject:
   - component: {fileID: 2088743136}
   m_Layer: 0
   m_Name: DeliveryObjective
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31277,6 +31309,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
   m_PrefabInstance: {fileID: 2092571605}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2096295245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2096295246}
+  m_Layer: 0
+  m_Name: DeliveryObjective
+  m_TagString: Delivery
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2096295246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096295245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -132.9, y: 0, z: 79.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1086579860}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2104740609
 PrefabInstance:
   m_ObjectHideFlags: 0
