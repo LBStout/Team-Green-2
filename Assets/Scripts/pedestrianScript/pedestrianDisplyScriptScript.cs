@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class pedestrianDisplyScript : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject[] people;
-    public float defaultTimer = 10f;
-    private float timer = 0f;
+    //public float defaultTimer = 10f;
+    //private float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,8 @@ public class NewBehaviourScript : MonoBehaviour
         for (int i = 0; i < people.Length; i++)
         {
 
-            //people[i].GetComponent<Nav>
-
+            people[i].GetComponent<NavMeshAgent>().enabled = false;
+            people[i].GetComponent<PedestrianController>().enabled = false;
         }
 
     }
@@ -27,13 +28,13 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
-        {
-            timer = defaultTimer;
+        //timer -= Time.deltaTime;
+        //if (timer <= 0f)
+        //{
+        //    timer = defaultTimer;
 
 
-        }
+        //}
 
     }
 }
