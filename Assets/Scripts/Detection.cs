@@ -15,8 +15,8 @@ public class Detection : MonoBehaviour
     // called when another trigger is hit
     private void OnTriggerEnter(Collider other) 
     {
-        // if the trigger is not a waypoint, then it belongs to a vehicle object
-        if (other.gameObject.GetComponent<WaypointTrigger>() == null)
+        // if the trigger is not a waypoint or the objective, then it belongs to a vehicle object
+        if (other.gameObject.GetComponent<WaypointTrigger>() == null && other.gameObject.GetComponent<DeliveryScript>() == null)
         {
             // tell the vehicle to stop
             agent.shouldStop = true;
@@ -26,8 +26,8 @@ public class Detection : MonoBehaviour
     // called when a trigger is exited
     private void OnTriggerExit(Collider other) 
     {
-        // again, check if the other trigger is a waypoint; if not, it belongs to a vehicle
-        if (other.gameObject.GetComponent<WaypointTrigger>() == null)
+        // again, check if the other trigger is a waypoint or the objective; if not, it belongs to a vehicle
+        if (other.gameObject.GetComponent<WaypointTrigger>() == null && other.gameObject.GetComponent<DeliveryScript>() == null)
         {
             // tell the vehicle to resume movement
             agent.shouldStop = false;
