@@ -67,12 +67,15 @@ public class SteeringWheel : MonoBehaviour
     [Tooltip("How far the wheel can remain held from."), Range(0f, 1f)]
     public float maxDistance = 1f;
 
+    private Vector3 pos;
+
     // Start is called before the first frame update
     void Start()
     {
         Angle = 0f;
         lastAngle = Mathf.Infinity;
         m_WheelUp = Vector3.zero;
+        pos = transform.localPosition;
     }
 
     // Update is called once per frame
@@ -144,6 +147,9 @@ public class SteeringWheel : MonoBehaviour
             transform.RotateAround(transform.position, -transform.up, blend);
             Angle = Vector3.SignedAngle(-transform.forward, WheelUp, -transform.up);
         }
+
+        // Fix for wheel transform drift
+        transform.localPosition = pos;
     }
 
     private void OnDrawGizmos()
